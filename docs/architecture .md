@@ -27,10 +27,10 @@ flowchart LR
    ##sequenceDiagram
 
    ```mermaid
-    participant U as "User_Wallet_Prover"
+    participant U as "User Wallet rover"
     participant I as "Issuer"
     participant V as "Verifier_App"
-    participant C as "Casper_Contracts"
+    participant C as "Casper Contracts"
 
     U ->> I: Present identity and DOB
     I ->> C: (optional) Register credential hash
