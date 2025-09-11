@@ -17,13 +17,13 @@ flowchart LR
         Rev["Revocation List (Contract)"]
     end
 
-    Issuer -->|issues signed attestation| Cred
+    Issuer -->|"issues signed attestation"| Cred
     Cred --> Prover
-    Prover -->|ZK proof: age ≥ N| Verifier
-    Verifier -->|verifyProof(proof)| VRF
-    VRF -->|valid/invalid| Verifier
-    Issuer -->|publish revocations| Rev
-    Verifier -->|optionally read| VCReg
+    Prover -->|"ZK proof: age ≥ N"| Verifier
+    Verifier -->|"verifyProof(proof)"| VRF
+    VRF -->|"valid/invalid"| Verifier
+    Issuer -->|"publish revocations"| Rev
+    Verifier -->|"optionally read"| VCReg
 sequenceDiagram
     participant U as User (Wallet + Prover)
     participant I as Issuer
