@@ -1,8 +1,3 @@
-# Architecture
-
-## Component Diagram
-
-```mermaid
 flowchart LR
     subgraph UserSide[User Wallet / Device]
         Cred["ZKP Credential (private)"]
@@ -25,7 +20,7 @@ flowchart LR
     VRF -->|valid/invalid| Verifier
     Issuer -->|publish revocations| Rev
     Verifier -->|read registry| VCReg
-sequenceDiagram
+    sequenceDiagram
     participant U as "User Wallet & Prover"
     participant I as Issuer
     participant V as "Verifier App"
