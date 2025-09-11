@@ -23,7 +23,10 @@ flowchart LR
   VRF -->|valid / invalid| Verifier
   Issuer -->|publish revocations| Rev
   Verifier -->|read registry| VCReg```
-sequenceDiagram
+
+   ##sequenceDiagram
+
+   ```mermaid
     participant U as User_Wallet_Prover
     participant I as Issuer
     participant V as Verifier_App
