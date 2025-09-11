@@ -34,17 +34,17 @@ sequenceDiagram
     Note over U,I: Enrollment / Credential Issuance
     U->>I: Present identity & DOB (one-time)
     I->>C: (optional) Register credential hash/metadata
-    I-->>U: Issue signed credential (kept private)
+    I->>U: Issue signed credential (kept private)
     end
 
     rect rgb(245,245,245)
     Note over U,V: Prove age without revealing DOB
     V->>U: Request proof: "age ≥ threshold"
     U->>U: Generate ZK proof locally
-    U-->>V: Send proof (no DOB/PII)
+    U->>V: Send proof (no DOB/PII)
     V->>C: verifyProof(proof, threshold)
-    C-->>V: Result: valid/invalid
-    V-->>U: Access granted/denied
+    C->>V: Result: valid/invalid
+    V->>U: Access granted/denied
     end
 
     rect rgb(245,245,245)
