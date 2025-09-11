@@ -1,16 +1,16 @@
 ```mermaid
 flowchart LR
     subgraph UserSide[User Wallet / Device]
-      Cred[ZKP Credential (private)]
-      Prover[ZK Prover]
+        Cred[ZKP Credential (private)]
+        Prover[ZK Prover]
     end
 
     Issuer[Issuer\n(e.g., Registrar/KYC Provider)]
     Verifier[Verifier Platform\n(App/Web needing age check)]
     subgraph Casper[Casper Network]
-      VCReg[Credential Registry\n(Contract)]
-      VRF[Verification Contract\n(Age ≥ Threshold)]
-      Rev[Revocation List\n(Contract)]
+        VCReg[Credential Registry\n(Contract)]
+        VRF[Verification Contract\n(Age ≥ Threshold)]
+        Rev[Revocation List\n(Contract)]
     end
 
     Issuer -->|issues signed attestation| Cred
@@ -19,8 +19,7 @@ flowchart LR
     Verifier -->|verifyProof(proof)| VRF
     VRF -->|valid/invalid| Verifier
     Issuer -->|publish revocations| Rev
-    Verifier -->|optionally read| VCReg
-    ---
+    Verifier -->|optionally read| VCReg---
 
 ## Sequence of an Age Check
 
@@ -52,4 +51,4 @@ sequenceDiagram
     Note over I,C: Revocation (if needed)
     I->>C: Revoke/expire credential
     V->>C: Check revocation at verify time
-    end
+    end```
