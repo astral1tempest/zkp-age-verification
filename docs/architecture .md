@@ -9,12 +9,12 @@ flowchart LR
     end
 
     Issuer["Issuer (e.g., Registrar/KYC Provider)"]
-    Verifier[Verifier Platform (App/Web needing age check)]
+    Verifier["Verifier Platform (App/Web needing age check)"]
 
     subgraph Casper[Casper Network]
-        VCReg[Credential Registry (Contract)]
-        VRF[Verification Contract (Age ≥ Threshold)]
-        Rev[Revocation List (Contract)]
+        VCReg["Credential Registry (Contract)"]
+        VRF["Verification Contract (Age ≥ Threshold)"]
+        Rev["Revocation List (Contract)"]
     end
 
     Issuer -->|issues signed attestation| Cred
