@@ -26,10 +26,10 @@ flowchart LR
     Issuer -->|publish revocations| Rev
     Verifier -->|read registry| VCReg
 sequenceDiagram
-    participant U as "User Wallet + Prover"
-    participant I as "Issuer"
-    participant V as "Verifier App"
-    participant C as "Casper Contracts"
+    participant U as User_Wallet_Prover
+    participant I as Issuer
+    participant V as Verifier_App
+    participant C as Casper_Contracts
 
     rect rgb(245,245,245)
     Note over U,I: Enrollment / Credential Issuance
