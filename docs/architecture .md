@@ -27,7 +27,7 @@ flowchart LR
    ##sequenceDiagram
 
    ```mermaid
-    participant U as "User Wallet + Prover"
+    participant U as "User_Wallet_Prover"
     participant I as "Issuer"
     participant V as "Verifier_App"
     participant C as "Casper_Contracts"
