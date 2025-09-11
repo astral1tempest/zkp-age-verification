@@ -4,7 +4,7 @@
 ```mermaid
 flowchart LR
     subgraph UserSide[User Wallet / Device]
-        Cred[ZKP Credential (private)]
+        Cred[ZKP Credential]
         Prover[ZK Prover]
     end
 
