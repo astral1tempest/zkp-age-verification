@@ -23,3 +23,34 @@ flowchart LR
   VRF -->|valid / invalid| Verifier
   Issuer -->|publish revocations| Rev
   Verifier -->|read registry| VCReg
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+  participant U as "User Wallet + Prover"
+  participant I as "Issuer"
+  participant V as "Verifier App"
+  participant C as "Casper Contracts"
+
+  rect rgb(245,245,245)
+    Note over U,I: Enrollment / Credential Issuance
+    U ->> I: Present identity & DOB
+    I ->> C: (optional) Register credential hash
+    I ->> U: Issue signed credential
+  end
+
+  rect rgb(245,245,245)
+    Note over U,V: Age Proof
+    V ->> U: Request proof (age ≥ N)
+    U ->> U: Generate ZK proof locally
+    U ->> V: Send proof (no DOB/PII)
+    V ->> C: Verify proof
+    C ->> V: Return valid/invalid
+    V ->> U: Access granted/denied
+  end
+
+  rect rgb(245,245,245)
+    Note over I,C: Revocation
+    I ->> C: Revoke/expire credential
+    V ->> C: Check revocation at verification
+  end
