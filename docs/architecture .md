@@ -24,7 +24,8 @@ flowchart LR
   Issuer -->|publish revocations| Rev
   Verifier -->|read registry| VCReg```
 
-   ## Sequence Diagram
+
+## Sequence Diagram
 
 ```mermaid
 sequenceDiagram
