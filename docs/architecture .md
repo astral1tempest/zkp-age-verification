@@ -1,6 +1,7 @@
 # Architecture
 
 ## Component Diagram
+
 ```mermaid
 flowchart LR
     subgraph UserSide[User Wallet / Device]
@@ -11,44 +12,44 @@ flowchart LR
     Issuer["Issuer (e.g., Registrar/KYC Provider)"]
     Verifier["Verifier App"]
 
-    subgraph Casper[Casper Network]
+    subgraph Casper["Casper Network"]
         VCReg["Credential Registry"]
         VRF["Verification Contract"]
         Rev["Revocation List"]
     end
 
-    Issuer --> Cred
+    Issuer -->|attests| Cred
     Cred --> Prover
-    Prover --> Verifier
-    Verifier --> VRF
-    VRF --> Verifier
-    Issuer --> Rev
-    Verifier --> VCReg
+    Prover -->|ZK proof: age ≥ N| Verifier
+    Verifier -->|verifyProof(proof)| VRF
+    VRF -->|valid/invalid| Verifier
+    Issuer -->|publish revocations| Rev
+    Verifier -->|read registry| VCReg
 sequenceDiagram
-    participant U as User (Wallet + Prover)
+    participant U as "User Wallet & Prover"
     participant I as Issuer
-    participant V as Verifier App
-    participant C as Casper Contracts
+    participant V as "Verifier App"
+    participant C as "Casper Contracts"
 
     rect rgb(245,245,245)
     Note over U,I: Enrollment / Credential Issuance
-    U ->> I: Present identity & DOB (one-time)
+    U ->> I: Present identity & DOB
     I ->> C: (optional) Register credential metadata
-    I ->> U: Issue signed credential (kept private)
+    I ->> U: Issue signed credential
     end
 
     rect rgb(245,245,245)
-    Note over U,V: Age Proof without revealing DOB
+    Note over U,V: Age Proof
     V ->> U: Request proof (age ≥ threshold)
     U ->> U: Generate ZK proof locally
     U ->> V: Send proof (no DOB/PII)
     V ->> C: Verify proof
-    C ->> V: Return result (valid/invalid)
+    C ->> V: Result valid/invalid
     V ->> U: Access granted/denied
     end
 
     rect rgb(245,245,245)
     Note over I,C: Revocation
-    I ->> C: Revoke or expire credential
+    I ->> C: Revoke/expire credential
     V ->> C: Check revocation
     end
