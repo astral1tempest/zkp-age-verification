@@ -22,7 +22,7 @@ flowchart LR
   Verifier -->|verify proof| VRF
   VRF -->|valid / invalid| Verifier
   Issuer -->|publish revocations| Rev
-  Verifier -->|read registry| VCReg
+  Verifier -->|read registry| VCReg```
 sequenceDiagram
     participant U as User_Wallet_Prover
     participant I as Issuer
