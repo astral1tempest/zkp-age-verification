@@ -8,7 +8,7 @@ flowchart LR
         Prover[ZK Prover]
     end
 
-    Issuer[Issuer (e.g., Registrar/KYC Provider)]
+    Issuer["Issuer (e.g., Registrar/KYC Provider)"]
     Verifier[Verifier Platform (App/Web needing age check)]
 
     subgraph Casper[Casper Network]
