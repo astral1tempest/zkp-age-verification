@@ -24,24 +24,28 @@ flowchart LR
   Issuer -->|publish revocations| Rev
   Verifier -->|read registry| VCReg```
 
-   ##sequenceDiagram
+   ## Sequence Diagram
 
-   ```mermaid
-    participant U as "User Wallet rover"
+```mermaid
+sequenceDiagram
+    participant U as "User Wallet and Prover"
     participant I as "Issuer"
-    participant V as "Verifier_App"
+    participant V as "Verifier App"
     participant C as "Casper Contracts"
 
-    U ->> I: Present identity and DOB
+    Note over U,I: Enrollment / Credential Issuance
+    U ->> I: Present identity & DOB
     I ->> C: (optional) Register credential hash
     I ->> U: Issue signed credential
 
-    V ->> U: Request proof (age >= N)
+    Note over U,V: Age Proof without revealing DOB
+    V ->> U: Request proof (age ≥ N)
     U ->> U: Generate ZK proof locally
     U ->> V: Send proof (no DOB/PII)
-    V ->> C: Verify proof
+    V ->> C: Verify proof against registry
     C ->> V: Result valid/invalid
     V ->> U: Access granted/denied
 
+    Note over I,C: Revocation
     I ->> C: Revoke or expire credential
     V ->> C: Check revocation at verification
