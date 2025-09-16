@@ -3,27 +3,28 @@
 ## 📌 Abstract
 This whitepaper proposes a decentralized zero-knowledge proof (ZKP) system for age verification.  
 The goal is to provide a **privacy-preserving, verifiable method** that allows individuals to prove they are above or below a required age without disclosing personal information.  
-Built on the **Casper blockchain**, the system avoids centralized control and ensures scalability across industries and jurisdictions.
+
+Built on the **Casper blockchain**, the system avoids centralized control and ensures scalability across industries and jurisdictions.  
 
 ---
 
 ## 🔍 Introduction
-Age verification is becoming an increasingly critical requirement for:
+Age verification is becoming an increasingly critical requirement for:  
 - Social media and online platforms  
 - Online marketplaces and gambling services  
 - Adult content access  
 - Financial services (KYC/AML compliance)  
 
-Current methods rely heavily on **centralized digital ID systems** and data collection, which pose risks:
+Current methods rely heavily on **centralized digital ID systems** and data collection, which pose risks:  
 - Data breaches  
 - Government/corporate overreach  
 - Limited citizen control over identity  
 
-This project addresses those risks through a **decentralized architecture using ZKPs**.
+This project addresses those risks through a **decentralized architecture using ZKPs**.  
 
 ---
 
-## 🏷️ Problem Statement
+## 🏷 Problem Statement
 - **Centralized control**: Most age verification systems place control in governments or corporations.  
 - **Privacy concerns**: Users must hand over ID, exposing sensitive data.  
 - **Lack of interoperability**: Existing systems don’t scale globally across platforms.  
@@ -46,26 +47,34 @@ A **zero-knowledge proof framework** where:
 - **Casper smart contracts**: Manage verification logic, credential validity, and revocation.  
 - **ZKP layer**: Generates and validates cryptographic proofs without exposing underlying data.  
 
-*(Diagram placeholder — to be added later)*
+---
+
+## 💰 Tokenomics
+The protocol introduces a **native utility token** to support trust, adoption, and decentralization.  
+
+**Functions of the token**:  
+1. **Verification Fees**: Paid by verifiers (apps, platforms) to process ZK proofs.  
+2. **Staking**: Issuers and verifiers must stake tokens to ensure honest participation. Misbehavior → slashing.  
+3. **Incentives**: Early adopters, integrators, and developers earn token rewards for driving ecosystem growth.  
+4. **Governance**: Token holders vote on protocol upgrades, age thresholds, fee models, and ecosystem grants.  
+5. **Treasury Funding**: A portion of fees goes into a community-controlled treasury to fund ongoing development.  
+
+**Supply & Distribution (example draft)**  
+- Fixed total supply: **1B tokens**  
+- 40% ecosystem (staking rewards, adoption incentives)  
+- 20% development & grants  
+- 20% community/DAO treasury  
+- 10% team & advisors (vesting)  
+- 10% reserve/liquidity  
 
 ---
 
-## 💰 Tokenomics (Placeholder)
-The economic model could include:  
-- **Utility token** for transaction fees and verification costs.  
-- **Staking** by issuers/verifiers to ensure trust.  
-- **Incentives** for adoption across industries.  
-
-*(Details to be defined in future drafts.)*
-
----
-
-## 🛣️ Adoption Roadmap
-1. Draft and publish whitepaper (Q1).  
-2. Prototype Casper smart contracts (MVP).  
-3. Build a demo app for user–verifier interaction.  
-4. Partner with pilot platforms (social apps, online services).  
-5. Expand cross-border adoption, integrate with wallets.  
+## 🛣 Adoption Roadmap
+1. **Q1**: Draft & publish whitepaper; prototype Casper smart contracts (MVP).  
+2. **Q2**: Launch testnet utility token; integrate staking for issuers/verifiers.  
+3. **Q3**: Release demo app for user–verifier interaction; token mainnet launch.  
+4. **Q4**: Partner with pilot platforms (social apps, online services); enable governance voting.  
+5. **Year 2**: Expand cross-border adoption, wallet integrations, and incentivized programs.  
 
 ---
 
@@ -77,8 +86,8 @@ The economic model could include:
 ---
 
 ## ✅ Conclusion
-This project aims to **balance privacy, compliance, and usability** in digital age verification.  
-By leveraging **zero-knowledge proofs** and **Casper’s decentralized infrastructure**, it offers a scalable alternative to centralized digital ID systems.
+This project aims to balance **privacy, compliance, and usability** in digital age verification.  
+By leveraging **zero-knowledge proofs** and **Casper’s decentralized infrastructure**, it offers a scalable alternative to centralized digital ID systems.  
 
 ---
 
