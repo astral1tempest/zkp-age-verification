@@ -11,7 +11,9 @@ It will be updated as milestones are reached, and as community feedback and regu
 - [x] Define core architecture  
   - [x] Component diagram  
   - [x] Sequence diagram  
-- [ ] Establish governance repo and contribution guidelines  
+- [x] Establish governance repo and contribution guidelines  
+  - [x] CONTRIBUTING.md file added (guidelines for contributors)  
+  - [x] governance.md file added (placeholder for governance model; will evolve into DAO structure later)
 
 ---
 
