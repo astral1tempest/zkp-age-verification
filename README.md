@@ -35,13 +35,17 @@ The **whitepaper** (in `/docs`) will outline:
 
 ---
 
-## 🔮 Roadmap
-- [x] Create GitHub repository  
-- [ ] Upload initial whitepaper draft  
-- [ ] Define core architecture  
-- [ ] Write Casper-based smart contracts (MVP)  
-- [ ] Build demo app for verification flow  
-- [ ] Community feedback & iterations  
+## 🌍 Roadmap
+
+The project will evolve in phases:
+
+1. **Foundation (Q1):** Whitepaper, architecture, governance setup  
+2. **Prototype (Q2):** Casper smart contracts (MVP) + testnet deployment  
+3. **Demo App (Q3):** User/Verifier app + pilot platform integrations  
+4. **Adoption (Q4):** Token utility, staking, broader partnerships  
+5. **Scaling (Year 2+):** DAO governance, expanded proofs, global adoption  
+
+➡️ For the full roadmap, see [/docs/roadmap.md](./docs/roadmap.md)
 
 ---
 
