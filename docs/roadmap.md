@@ -18,10 +18,14 @@ It will be updated as milestones are reached, and as community feedback and regu
 ---
 
 ## Phase 2: Prototype (Q2)
-- [ ] Write Casper-based smart contracts (MVP)  
-  - [ ] Credential Registry  
-  - [ ] Proof Verification Contract  
-- [ ] Deploy to testnet for validation  
+- [ ] Develop Casper-based smart contracts (MVP)  
+  - [ ] Credential Registry (store credential commitments)  
+  - [ ] Proof Verification Contract (validate ZKPs)  
+  - [ ] Revocation List (manage revoked/expired credentials)  
+- [ ] Write unit tests for each contract  
+- [ ] Deploy contracts to Casper Testnet  
+- [ ] Document contract APIs and usage examples  
+- [ ] Conduct initial security review (basic, internal)
 
 ---
 
