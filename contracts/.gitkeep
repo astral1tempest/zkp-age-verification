@@ -1,0 +1,13 @@
+contracts/
+  credential_registry/
+    Cargo.toml
+    src/
+      lib.rs
+  proof_verification/
+    Cargo.toml
+    src/
+      lib.rs
+  revocation_list/
+    Cargo.toml
+    src/
+      lib.rs
